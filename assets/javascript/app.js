@@ -20,16 +20,19 @@ var animals = ["dog", "cat", "rabbit", "hamster", "skunk"];
 
           console.log(response);
 
-          var imgURL = "https://media.giphy.com/media/"+response.data[1].id + "/giphy.gif";
- 
-          alert(imgURL);
-          
-          var image = $("<img>").attr("src", imgURL);
-          image.addClass("gif");
-          image.addClass("playing");
+          for (var i=0; i<10; i++) {
 
-          // Appending the image
-          animalDiv.append(image);
+            var imgURL = "https://media.giphy.com/media/"+response.data[i].id + "/giphy.gif";
+    
+            alert(imgURL);
+            
+            var image = $("<img>").attr("src", imgURL);
+            image.addClass("gif");
+            image.addClass("playing");
+
+            // Appending the image
+            animalDiv.append(image);
+          }
 
         //   // Storing the plot
         //   var plot = response.Plot;
