@@ -28,7 +28,7 @@ var animals = ["dog", "cat", "rabbit", "hamster", "skunk", "goldfish", "bird", "
     
             //alert(imgURL);
             
-            var rating = $("<p>Rating: "+response.data[i].rating+"</p>");
+            var rating = $("<div>Rating: "+response.data[i].rating+"</div>");
 
             var image = $("<img>").attr("src", imgURL);
             image.addClass("gif");
