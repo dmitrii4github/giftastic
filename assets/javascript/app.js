@@ -20,6 +20,8 @@ var animals = ["dog", "cat", "rabbit", "hamster", "skunk"];
 
           console.log(response);
 
+          animalView.html("");
+
           for (var i=0; i<10; i++) {
 
             var imgURL = "https://media.giphy.com/media/"+response.data[i].id + "/giphy.gif";
