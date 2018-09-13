@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Game</title>
+
+  <!-- We link our html to the Bootstrap CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+</head>
+
+<body background="assets/images/90sBackground.jpg">
+    <div class="container">
+        <div class="col-md-11">
+            <h1 align="center">Totally Trivial Trivia!</h1>
+            <div class="button_div">
+                <button id="start_button">Start</button>
+            </div>
+            <div id="questions">
+                <p id="time_remaining">Time Remaining: <span id="countdowntimer">20</span> Seconds</p>
+                <div class="question">
+                    <h2 align="center">Which NBA Team won the most titles in the 90s?</h2>
+                    <div class="checkboxes">
+                        <input type="checkbox" name="team" value="NewYork" onclick="onlyOne(this)">New York Knicks</input>
+                        <input type="checkbox" name="team" value="Portland" onclick="onlyOne(this)">Portland Trailblazers</input>
+                        <input type="checkbox" name="team" value="Chicago" onclick="onlyOne(this)" id="Bulls">Chicago Bulls</input>
+                    </div>
+                </div>
+                <div class="question">
+                        <h2 align="center">Which group released the hit "Smells Like a Teen Spirit?"</h2>
+                        <div class="checkboxes">                        
+                            <input type="checkbox" name="band" value="Offspring" onclick="onlyOneBand(this)">Offspring</input>
+                            <input type="checkbox" name="band" value="Nirvana" onclick="onlyOneBand(this)" id="Nirvana">Nirvana</input>
+                            <input type="checkbox" name="band" value="No Doubt" onclick="onlyOneBand(this)">No Doubt</input>
+                
+                        </div>
+                    </div>
+                <div class="question">
+                        <h2 align="center">Which popular Disney movie featured the song "Circle of life"</h2>
+                        <div class="checkboxes">
+                            <input type="checkbox" name="song" value="The Lion King" onclick="onlyOneSong(this)" id="LionKing">The Lion King</input>
+                            <input type="checkbox" name="song" value="Alladin" onclick="onlyOneSong(this)">Alladin</input>
+                            <input type="checkbox" name="song" value="Mulan" onclick="onlyOneSong(this)">Mulan</input>
+                        </div>
+                    </div>
+                <div class="button_div">
+                    <button id="done_button">Done</button>
+                </div>
+            </div>
+            <div id="answers">
+                <h2>All Done!</h2>
+                <p>Correct Answers: <span id="questions_answered_correctly">0</span></p>
+                <p>Incorrect Answers: <span id="questions_answered_incorrectly">0</span></p>
+                <p>Questions unanswered: <span id="questions_unanswered">0</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
