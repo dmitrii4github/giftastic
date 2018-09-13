@@ -1,4 +1,4 @@
-var animals = ["dog", "cat", "rabbit", "hamster", "skunk"];
+var animals = ["dog", "cat", "rabbit", "hamster", "skunk", "goldfish", "bird", "ferret", "turtle", "sugar glider", "chinchilla", "hedgehog", "hermit crab", "gerbil", "pygmy goat", "chicken", "capybara", "teacup pig", "serval", "salamander", "frog"]; 
 
       // displayAnimalGifs function re-renders the HTML to display the appropriate content
       function displayAnimalGifs() {
@@ -26,7 +26,7 @@ var animals = ["dog", "cat", "rabbit", "hamster", "skunk"];
 
             var imgURL = "https://media.giphy.com/media/"+response.data[i].id + "/giphy.gif";
     
-            alert(imgURL);
+            //alert(imgURL);
             
             var image = $("<img>").attr("src", imgURL);
             image.addClass("gif");
