@@ -20,11 +20,13 @@ var animals = ["dog", "cat", "rabbit", "hamster", "skunk"];
 
           console.log(response);
 
-          var imgURL = "https://media.giphy.com/media/"+response.data[0].id + "/giphy.gif";
+          var imgURL = "https://media.giphy.com/media/"+response.data[1].id + "/giphy.gif";
  
           alert(imgURL);
           
           var image = $("<img>").attr("src", imgURL);
+          image.addClass("gif");
+          image.addClass("playing");
 
           // Appending the image
           animalDiv.append(image);
@@ -94,19 +96,7 @@ var animals = ["dog", "cat", "rabbit", "hamster", "skunk"];
       $(document).on("click", ".movie-btn", displayAnimalGifs);
 
 
-      $("#animal-view").on('click', function(event) {
-          alert("Clicked");
-        //var src = $(this).attr("src");
-      if($(this).hasClass('playing')){
-         //stop
-         //$(this).attr('src', src.replace(/\.gif/i, "_s.gif"))
-         $(this).removeClass('playing');
-      } else {
-        //play
-        $(this).addClass('playing');
-        //$(this).attr('src', src.replace(/\_s.gif/i, ".gif"))
-      }
-    });
+      
 
 
 
@@ -115,4 +105,25 @@ var animals = ["dog", "cat", "rabbit", "hamster", "skunk"];
       $(document).ready(function() {
       // Calling the renderButtons function to display the intial buttons
       renderButtons();
+    });
+
+
+    //$(".gif").on('click', function() {
+    //$(document).on("click", ".gif", clickOnGif(this));
+    
+    //function clickOnGif(){
+
+    $(document).on("click", ".gif", function(){
+        //alert("Clicked");
+      var src = $(this).attr("src");
+    if($(this).hasClass('playing')){
+       //stop
+       $(this).attr('src', src.replace(".gif", "_s.gif"))
+       //alert($(this).attr('src'));
+       $(this).removeClass('playing');
+    } else {
+      //play
+      $(this).addClass('playing');
+      $(this).attr('src', src.replace("_s.gif", ".gif"))
+    }
     });
