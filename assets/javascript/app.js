@@ -77,7 +77,7 @@ var animals = ["dog", "cat", "rabbit", "hamster", "skunk", "goldfish", "bird", "
         // This line grabs the input from the textbox
         var animal = $("#animal-input").val().trim();
 
-        alert(animal);
+        //alert(animal);
 
         // Adding animal from the textbox to our array
         animals.push(animal);
