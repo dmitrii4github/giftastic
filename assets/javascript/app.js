@@ -28,11 +28,15 @@ var animals = ["dog", "cat", "rabbit", "hamster", "skunk", "goldfish", "bird", "
     
             //alert(imgURL);
             
+            var rating = $("<p>Rating: "+response.data[i].rating+"</p>");
+
             var image = $("<img>").attr("src", imgURL);
             image.addClass("gif");
             image.addClass("playing");
 
             // Appending the image
+            
+            animalDiv.append(rating);
             animalDiv.append(image);
           }
 
